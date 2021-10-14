@@ -1,0 +1,61 @@
+<aura:component 
+    implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+    access="global"
+    controller="LeadController">
+
+    <aura:attribute name="leadList" type="Lead[]" />
+    <aura:attribute name="listLoaded" type="String" />
+    <aura:attribute name="statusPickListValues" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds-box slds-theme_default">
+
+
+      <div class="slds-page-header">
+        <div class="slds-page-header__row">
+          <div class="slds-page-header__col-title">
+            <div class="slds-media">
+              <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-standard-opportunity" title="Leads">
+                  <lightning:icon icon-name="standard:opportunity" alternative-text="Leads" size="medium"
+                    title="Recent Leads"></lightning:icon>
+                  <span class="slds-assistive-text">Recent Leads</span>
+                </span>
+              </div>
+              <div class="slds-media__body">
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title">
+                    <h1>
+                      <span class="slds-page-header__title slds-truncate" title="Recent Leads">Recent Leads</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group slds-m-bottom_large slds-m-top_small">
+        <lightning:select aura:id="statusPicklist" onchange="{!c.handleOnChangeStatus}" name="statusPicklist">
+            <option value="">All</option>
+            <aura:iteration items="{!v.statusPickListValues}" var="i" indexVar="key">
+                <option text="{!i.value}" value="{!i.key}" />
+            </aura:iteration>
+        </lightning:select>
+      </div>
+
+      <aura:iteration items="{!v.leadList}" var="item">
+        <c:LeadCardComponent 
+          divClass="{!item.Id == v.recordId? 'slds-box slds-box_link slds-theme_success':'slds-box slds-box_link'}"
+          leadId="{!item.Id}"
+          leadTitle="{!item.Title}" 
+          leadFirstName="{!item.FirstName}" 
+          leadLastName="{!item.LastName}" 
+          leadStatus="{!item.Status}"
+          leadTimeZone="{!item.TimeZone__c}"
+          leadFlagged="{!item.Flagged__c}"
+          leadPeriod="{!item.Period}"
+          />
+      </aura:iteration>
+    </div>
+</aura:component>
