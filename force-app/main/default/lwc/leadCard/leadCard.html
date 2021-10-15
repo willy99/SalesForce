@@ -1,0 +1,78 @@
+<template>
+
+    <div class="slds-box slds-theme_default">
+
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+            <div class="slds-page-header__col-title">
+                <div class="slds-media">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-opportunity" title="Leads">
+                    <lightning-icon icon-name="standard:opportunity" alternative-text="Leads" size="medium"
+                        title="Recent Leads"></lightning-icon>
+                    <span class="slds-assistive-text">Recent Leads</span>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <div class="slds-page-header__name">
+                    <div class="slds-page-header__name-title">
+                        <h1>
+                        <span class="slds-page-header__title slds-truncate" title="Recent Leads">Recent Leads</span>
+                        </h1>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="form-group slds-m-bottom_large slds-m-top_small">
+            <lightning-combobox 
+                id="statusPicklist" 
+                onchange={handleOnChangeStatus} 
+                name="statusPicklist" 
+                value={status}
+                options={statusPickListValues}>
+            </lightning-combobox>
+        </div>
+    
+        <template if:true={leadList}>
+            <template for:each={leadList} for:item="lead">
+
+                <div key='{lead.Id}' class="demo-only">
+                    <div class={lead.LeadClass}>
+                        <div key={lead.Id} data-id={lead.Id} onclick={loadLead}>
+                            <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+                            <div class="slds-size_1-of-12 slds-align_absolute-center">
+                                <div>
+                                <template if:true={lead.Flagged__c}>
+                                    <img src={flagImage}/>
+                                </template>
+                                
+                                </div>
+                            </div>
+                            <div class="slds-size_11-of-12 slds-m-left-middle">
+                                <div class="slds-tile">
+                                    <div class="slds-text-heading_medium">{lead.FirstName} {lead.LastName}</div>
+                                    <div class="demo-only demo-only--sizing slds-grid slds-wrap slds-m-bottom_small slds-m-top_small">
+                                        <div class="slds-size_1-of-12">
+                                            <img src={lead.PeriodImg}/>
+                                        </div>
+                                        <div class="slds-size_11-of-12">
+                                            {lead.Status}
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </template>
+        </template>
+    </div>
+
+</template>

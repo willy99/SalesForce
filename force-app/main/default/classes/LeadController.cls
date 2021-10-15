@@ -1,6 +1,6 @@
 public with sharing class LeadController {
 
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
     public static List<Lead> fetchRecentLeads(String searchString) {
         searchString = '%' + String.escapeSingleQuotes(searchString) + '%';
         System.debug('>>> Search string :' + searchString);
@@ -15,7 +15,7 @@ public with sharing class LeadController {
         return leadList;
     }
 
-    @AuraEnabled 
+    @AuraEnabled(cacheable=true)
     public static Map<String, String> getStatusPickListMap() {
         Map<String, String> options = new Map<String, String>();
         
