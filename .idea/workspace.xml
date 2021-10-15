@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0491afac-341e-4c55-b149-d770c2a55d80" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/aura/LeadRecentComponent/LeadRecentComponent.cmp" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/aura/LeadRecentComponent/LeadRecentComponent.cmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/aura/LeadRecentComponent/LeadRecentComponentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/aura/LeadRecentComponent/LeadRecentComponentController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +15,9 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +54,41 @@
             <path>
               <item name="SalesForce" type="b2602c69:ProjectViewProjectNode" />
               <item name="SalesForce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SalesForce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SalesForce" type="462c0819:PsiDirectoryNode" />
+              <item name="force-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SalesForce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SalesForce" type="462c0819:PsiDirectoryNode" />
+              <item name="force-app" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SalesForce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SalesForce" type="462c0819:PsiDirectoryNode" />
+              <item name="force-app" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SalesForce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SalesForce" type="462c0819:PsiDirectoryNode" />
+              <item name="force-app" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="aura" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SalesForce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SalesForce" type="462c0819:PsiDirectoryNode" />
+              <item name="force-app" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="aura" type="462c0819:PsiDirectoryNode" />
+              <item name="LeadCardComponent" type="edc2aaaf:IlluminatedCloudProjectTreeStructureProvider$BundleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -116,7 +156,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634246499269</updated>
-      <workItem from="1634246501175" duration="637000" />
+      <workItem from="1634246501175" duration="979000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Project Structure">
       <created>1634246605468</created>
@@ -125,11 +165,18 @@
       <option name="project" value="LOCAL" />
       <updated>1634246605468</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="vstudio changes">
+      <created>1634247249566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634247249566</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="637000" />
+    <option name="totallyTimeSpent" value="979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-278" y="-1051" width="1907" height="1050" extended-state="0" />
@@ -175,7 +222,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Project Structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Project Structure" />
+    <MESSAGE value="vstudio changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="vstudio changes" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/force-app/main/default/aura/LeadCardComponent/LeadCardComponent.cmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

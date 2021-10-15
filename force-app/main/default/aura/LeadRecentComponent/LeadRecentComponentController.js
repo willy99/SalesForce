@@ -11,6 +11,12 @@
         console.log(searchValue);
         helper.loadLeads(component, event, searchValue);
         //alert('changed');
+    },
+
+    onRefresh: function(component, event, helper) {
+        console.log('>>> on refresh');
+        let searchValue = component.find("statusPicklist").get("v.value");
+        helper.loadLeads(component, event, searchValue);
     }
 
 })
